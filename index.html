@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 Border Radius Previewer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="flex items-center justify-center min-h-screen">
+        <div class="bg-white p-7 rounded-lg shadow-lg max-w-lg mx-auto">
+            <h1 class="text-3xl font-bold ">CSS3 Border Radius Previewer</h1>
+            <br>
+            <div class="flex items-center justify-center mb-5">
+                <label for="color-picker" class="text-sm font-medium mr-2">Color:</label>
+                <input id="color-picker" type="color" value="#3B82F6" class="border p-2 rounded">
+            </div>
+            <div id="preview-box" class="w-64 h-64 mx-auto mb-6" style="background-color: #3B82F6;"></div>
+            <div class="grid grid-cols-2 gap-4 mb-4">
+                <div class="flex flex-col">
+                    <input id="top-left" type="number" placeholder="Top-Left" class="border p-2 rounded mb-2">
+                    <input id="top-left-2" type="number" placeholder="Top-Left-2" class="border p-2 rounded">
+                </div>
+                <div class="flex flex-col">
+                    <input id="top-right" type="number" placeholder="Top-Right" class="border p-2 rounded mb-2">
+                    <input id="top-right-2" type="number" placeholder="Top-Right-2" class="border p-2 rounded">
+                </div>
+                <div class="flex flex-col">
+                    <input id="bottom-right" type="number" placeholder="Bottom-Right" class="border p-2 rounded mb-2">
+                    <input id="bottom-right-2" type="number" placeholder="Bottom-Right-2" class="border p-2 rounded">
+                </div>
+                <div class="flex flex-col">
+                    <input id="bottom-left" type="number" placeholder="Bottom-Left" class="border p-2 rounded mb-2">
+                    <input id="bottom-left-2" type="number" placeholder="Bottom-Left-2" class="border p-2 rounded">
+                </div>
+            </div>
+            <div class="flex items-center  mb-6">
+                <label for="unit" class="text-sm font-medium">Unidad: </label>
+                <br>
+                <select id="unit" class="border p-1 rounded">
+                    <option value="px">px</option>
+                    <option value="%">%</option>
+                    <option value="em">em</option>
+                </select>
+            </div>
+            <button id="copy-css" class="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600">
+                <i class="fas fa-copy"></i> Copiar CSS
+            </button>
+            <p id="css-output" class="mt-2 text-sm text-gray-600 text-center"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
